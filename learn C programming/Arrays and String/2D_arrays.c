@@ -92,6 +92,8 @@ int main(){
             break;
     }
 
+
+    printf("\nthe process is sucussesfully completed");
     return 0;
 
 }
