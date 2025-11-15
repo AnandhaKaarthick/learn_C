@@ -29,9 +29,20 @@ void sub(int a[3][3], int b[3][3], int sum[3][3]){
 void mul(int a[3][3], int b[3][3], int sum[3][3]){
         for (int i=0; i<3; i++){
             for(int j=0; j<3; j++){
-                sum[i][j] = a[i][j] * b[i][j];
+                sum[i][j] = 0;
+                for(int k = 0; k<3; k++){
+                    sum[i][j] += a[i][k] * b[i][k];
+                }
             }
         }
+}
+
+void trans(int a[3][3], int tran[3][3]){
+    for (int i=0; i<3; i++){
+        for(int j=0; j<3; j++){
+            tran[i][j] = a[j][i];
+        }
+    }
 }
 
 int main(){
@@ -58,15 +69,15 @@ int main(){
 
     printf("\nThe entered Matrix 1 is:\n");
     
-    display(b);
+    display(a);
     
 
     printf("\nThe entered Matrix 2 is:\n");
-    display(a);
+    display(b);
 
 
-    printf("enter the option: \n");
-    printf("1.Add\n2.Sub\n3.mul");
+    printf("\nenter the option: \n");
+    printf("1.Add\n2.Sub\n3.Mul\n4.Transpose\n");
     scanf("%d", &option);
     switch(option){
         case 1:
@@ -77,7 +88,7 @@ int main(){
 
         case 2:
             sub(a, b, c);
-            printf("\nThe Subracion of matrix:\n");
+            printf("\nThe Subtraction of matrix:\n");
             display(c);
             break;
 
@@ -87,13 +98,19 @@ int main(){
             display(c);
             break;
 
+        case 4:
+            trans(a, c);
+            printf("\nThe Transpose of the matrix is:\n");
+            display(c);
+            break;
+
         default:
             printf("Invalid Input!\n");
             break;
     }
 
 
-    printf("\nthe process is sucussesfully completed");
+    printf("\nThe process is successfully completed\n");
     return 0;
 
 }
