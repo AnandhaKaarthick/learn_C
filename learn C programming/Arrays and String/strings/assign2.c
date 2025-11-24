@@ -2,8 +2,7 @@
  #include<string.h>
 
  int main(){
-    char str1[50];
-    char str2[50];
+    char str1[50], str2[50];
 
     printf("Enter the first string: ");
     fgets(str1, sizeof(str1), stdin);

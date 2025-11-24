@@ -1,20 +1,11 @@
 #include<stdio.h>
 int main(){
-    int choice;
-    printf("choose one number from(1,2): ");
-    scanf("%d", &choice);
-
-    switch(choice){
-        case 1:
-            printf("u chose 1");
-            break;
-
-        case 2:
-            printf("u chose 2");
-            break;
-        default:
-            printf("Invalid Choice");
-            break;
+    int a[2][3] = {{1,2,3}, {1,3,3}};
+    for (int i=0; i<2; i++){
+        for (int j=0; j<3; j++){
+            printf("%d", a[i][j]);
+        }
+        printf("\n");
     }
     return 0;
 }
