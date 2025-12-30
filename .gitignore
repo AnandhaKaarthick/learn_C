@@ -1,0 +1,13 @@
+# Compiled executables
+*.exe
+*.out
+*.o
+
+# IDE/Editor files
+.vscode/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+Thumbs.db
