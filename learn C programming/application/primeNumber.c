@@ -1,0 +1,20 @@
+#include<stdio.h>
+
+int isPrime(int n){
+    for(int i=2; i<n; i++){
+        if(n%i == 0){
+            return 0;
+        }
+    }
+    return 1;
+}
+
+int main(){
+    int n = 5;
+    if(isPrime(n)){
+        printf("entered number is prime");
+    }
+    else{
+        printf("entered number is not prime");
+    }
+}
